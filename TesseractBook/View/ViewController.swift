@@ -53,6 +53,7 @@ extension ViewController: UISearchBarDelegate {
 extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // use reusable Table view cell
         guard let cell:BookTableViewCell = tableView.dequeueReusableCell(withIdentifier:BookTableViewCell.Identifier , for: indexPath)  as? BookTableViewCell else {return UITableViewCell()}
         if let displaybook = self.allbooks?.items[indexPath.row] {
             cell.configure(book: displaybook)
@@ -76,7 +77,9 @@ extension ViewController: UITableViewDataSourcePrefetching{
         for ip in indexPaths {
             maxpos = maxpos < ip.row ? ip.row : maxpos
         }
+        // almost at the end of the list of books,  we try to obtain from google API the next 40 books
         if (allbooks.items.count-maxpos) < 5 {
+            // send same request but with new start index
             Dependencies.myModel.RequestBooksListNext()
         }
     }
