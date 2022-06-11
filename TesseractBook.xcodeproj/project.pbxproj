@@ -1,0 +1,657 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E4F000262854E35900933B6F /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F000252854E35900933B6F /* BookDetailViewController.swift */; };
+		E4F0002C2855020900933B6F /* Download+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F0002B2855020900933B6F /* Download+Cache.swift */; };
+		E4F0002E2855165E00933B6F /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F0002D2855165E00933B6F /* BookTableViewCell.swift */; };
+		E4F0003B28553DCA00933B6F /* TesseractBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F0003A28553DCA00933B6F /* TesseractBookUITests.swift */; };
+		E4F0003D28553DCA00933B6F /* TesseractBookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F0003C28553DCA00933B6F /* TesseractBookUITestsLaunchTests.swift */; };
+		E4F0004A28553DD600933B6F /* TesseractBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F0004928553DD600933B6F /* TesseractBookTests.swift */; };
+		E4F00056285545E000933B6F /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F9C2E628542F7B00B1DA79 /* Dependencies.swift */; };
+		E4F00057285545EA00933B6F /* APImanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F9C2E42854281C00B1DA79 /* APImanager.swift */; };
+		E4F00058285545EA00933B6F /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F9C2E22854269300B1DA79 /* model.swift */; };
+		E4F00059285545EB00933B6F /* APImanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F9C2E42854281C00B1DA79 /* APImanager.swift */; };
+		E4F0005A285545EB00933B6F /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F9C2E22854269300B1DA79 /* model.swift */; };
+		E4F0005B285545F000933B6F /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F9C2E628542F7B00B1DA79 /* Dependencies.swift */; };
+		E4F209DB2854148100526CE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F209DA2854148100526CE3 /* AppDelegate.swift */; };
+		E4F209DD2854148100526CE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F209DC2854148100526CE3 /* SceneDelegate.swift */; };
+		E4F209DF2854148100526CE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F209DE2854148100526CE3 /* ViewController.swift */; };
+		E4F209E22854148100526CE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4F209E02854148100526CE3 /* Main.storyboard */; };
+		E4F209E42854148200526CE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4F209E32854148200526CE3 /* Assets.xcassets */; };
+		E4F209E72854148200526CE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4F209E52854148200526CE3 /* LaunchScreen.storyboard */; };
+		E4F9C2E0285424A300B1DA79 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F9C2DF285424A300B1DA79 /* LibraryViewController.swift */; };
+		E4F9C2E32854269300B1DA79 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F9C2E22854269300B1DA79 /* model.swift */; };
+		E4F9C2E52854281C00B1DA79 /* APImanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F9C2E42854281C00B1DA79 /* APImanager.swift */; };
+		E4F9C2E728542F7B00B1DA79 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F9C2E628542F7B00B1DA79 /* Dependencies.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E4F0003E28553DCA00933B6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4F209CF2854148100526CE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4F209D62854148100526CE3;
+			remoteInfo = TesseractBook;
+		};
+		E4F0004B28553DD600933B6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4F209CF2854148100526CE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4F209D62854148100526CE3;
+			remoteInfo = TesseractBook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E4F000252854E35900933B6F /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		E4F0002B2855020900933B6F /* Download+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Download+Cache.swift"; sourceTree = "<group>"; };
+		E4F0002D2855165E00933B6F /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
+		E4F0003828553DCA00933B6F /* TesseractBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TesseractBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4F0003A28553DCA00933B6F /* TesseractBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesseractBookUITests.swift; sourceTree = "<group>"; };
+		E4F0003C28553DCA00933B6F /* TesseractBookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesseractBookUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E4F0004728553DD600933B6F /* TesseractBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TesseractBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4F0004928553DD600933B6F /* TesseractBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesseractBookTests.swift; sourceTree = "<group>"; };
+		E4F209D72854148100526CE3 /* TesseractBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesseractBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4F209DA2854148100526CE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E4F209DC2854148100526CE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E4F209DE2854148100526CE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E4F209E12854148100526CE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E4F209E32854148200526CE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E4F209E62854148200526CE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E4F209E82854148200526CE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4F9C2DF285424A300B1DA79 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		E4F9C2E22854269300B1DA79 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		E4F9C2E42854281C00B1DA79 /* APImanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APImanager.swift; sourceTree = "<group>"; };
+		E4F9C2E628542F7B00B1DA79 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4F0003528553DCA00933B6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4F0004428553DD600933B6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4F209D42854148100526CE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E4F0003928553DCA00933B6F /* TesseractBookUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E4F0003A28553DCA00933B6F /* TesseractBookUITests.swift */,
+				E4F0003C28553DCA00933B6F /* TesseractBookUITestsLaunchTests.swift */,
+			);
+			path = TesseractBookUITests;
+			sourceTree = "<group>";
+		};
+		E4F0004828553DD600933B6F /* TesseractBookTests */ = {
+			isa = PBXGroup;
+			children = (
+				E4F0004928553DD600933B6F /* TesseractBookTests.swift */,
+			);
+			path = TesseractBookTests;
+			sourceTree = "<group>";
+		};
+		E4F209CE2854148100526CE3 = {
+			isa = PBXGroup;
+			children = (
+				E4F209D92854148100526CE3 /* TesseractBook */,
+				E4F0003928553DCA00933B6F /* TesseractBookUITests */,
+				E4F0004828553DD600933B6F /* TesseractBookTests */,
+				E4F209D82854148100526CE3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E4F209D82854148100526CE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4F209D72854148100526CE3 /* TesseractBook.app */,
+				E4F0003828553DCA00933B6F /* TesseractBookUITests.xctest */,
+				E4F0004728553DD600933B6F /* TesseractBookTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4F209D92854148100526CE3 /* TesseractBook */ = {
+			isa = PBXGroup;
+			children = (
+				E4F9C2E628542F7B00B1DA79 /* Dependencies.swift */,
+				E4F9C2E12854268500B1DA79 /* model */,
+				E4F209EE285418A500526CE3 /* View */,
+				E4F209DA2854148100526CE3 /* AppDelegate.swift */,
+				E4F209DC2854148100526CE3 /* SceneDelegate.swift */,
+				E4F209E02854148100526CE3 /* Main.storyboard */,
+				E4F209E32854148200526CE3 /* Assets.xcassets */,
+				E4F209E52854148200526CE3 /* LaunchScreen.storyboard */,
+				E4F209E82854148200526CE3 /* Info.plist */,
+			);
+			path = TesseractBook;
+			sourceTree = "<group>";
+		};
+		E4F209EE285418A500526CE3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E4F209DE2854148100526CE3 /* ViewController.swift */,
+				E4F9C2DF285424A300B1DA79 /* LibraryViewController.swift */,
+				E4F000252854E35900933B6F /* BookDetailViewController.swift */,
+				E4F0002D2855165E00933B6F /* BookTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E4F9C2E12854268500B1DA79 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E4F9C2E22854269300B1DA79 /* model.swift */,
+				E4F9C2E42854281C00B1DA79 /* APImanager.swift */,
+				E4F0002B2855020900933B6F /* Download+Cache.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4F0003728553DCA00933B6F /* TesseractBookUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4F0004028553DCA00933B6F /* Build configuration list for PBXNativeTarget "TesseractBookUITests" */;
+			buildPhases = (
+				E4F0003428553DCA00933B6F /* Sources */,
+				E4F0003528553DCA00933B6F /* Frameworks */,
+				E4F0003628553DCA00933B6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4F0003F28553DCA00933B6F /* PBXTargetDependency */,
+			);
+			name = TesseractBookUITests;
+			productName = TesseractBookUITests;
+			productReference = E4F0003828553DCA00933B6F /* TesseractBookUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		E4F0004628553DD600933B6F /* TesseractBookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4F0004D28553DD600933B6F /* Build configuration list for PBXNativeTarget "TesseractBookTests" */;
+			buildPhases = (
+				E4F0004328553DD600933B6F /* Sources */,
+				E4F0004428553DD600933B6F /* Frameworks */,
+				E4F0004528553DD600933B6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4F0004C28553DD600933B6F /* PBXTargetDependency */,
+			);
+			name = TesseractBookTests;
+			productName = TesseractBookTests;
+			productReference = E4F0004728553DD600933B6F /* TesseractBookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E4F209D62854148100526CE3 /* TesseractBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4F209EB2854148200526CE3 /* Build configuration list for PBXNativeTarget "TesseractBook" */;
+			buildPhases = (
+				E4F209D32854148100526CE3 /* Sources */,
+				E4F209D42854148100526CE3 /* Frameworks */,
+				E4F209D52854148100526CE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TesseractBook;
+			productName = TesseractBook;
+			productReference = E4F209D72854148100526CE3 /* TesseractBook.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4F209CF2854148100526CE3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					E4F0003728553DCA00933B6F = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = E4F209D62854148100526CE3;
+					};
+					E4F0004628553DD600933B6F = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = E4F209D62854148100526CE3;
+					};
+					E4F209D62854148100526CE3 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = E4F209D22854148100526CE3 /* Build configuration list for PBXProject "TesseractBook" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E4F209CE2854148100526CE3;
+			productRefGroup = E4F209D82854148100526CE3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E4F209D62854148100526CE3 /* TesseractBook */,
+				E4F0003728553DCA00933B6F /* TesseractBookUITests */,
+				E4F0004628553DD600933B6F /* TesseractBookTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E4F0003628553DCA00933B6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4F0004528553DD600933B6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4F209D52854148100526CE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4F209E72854148200526CE3 /* LaunchScreen.storyboard in Resources */,
+				E4F209E42854148200526CE3 /* Assets.xcassets in Resources */,
+				E4F209E22854148100526CE3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4F0003428553DCA00933B6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4F0003D28553DCA00933B6F /* TesseractBookUITestsLaunchTests.swift in Sources */,
+				E4F00059285545EB00933B6F /* APImanager.swift in Sources */,
+				E4F0003B28553DCA00933B6F /* TesseractBookUITests.swift in Sources */,
+				E4F0005B285545F000933B6F /* Dependencies.swift in Sources */,
+				E4F0005A285545EB00933B6F /* model.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4F0004328553DD600933B6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4F00056285545E000933B6F /* Dependencies.swift in Sources */,
+				E4F00057285545EA00933B6F /* APImanager.swift in Sources */,
+				E4F0004A28553DD600933B6F /* TesseractBookTests.swift in Sources */,
+				E4F00058285545EA00933B6F /* model.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4F209D32854148100526CE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4F9C2E728542F7B00B1DA79 /* Dependencies.swift in Sources */,
+				E4F0002C2855020900933B6F /* Download+Cache.swift in Sources */,
+				E4F0002E2855165E00933B6F /* BookTableViewCell.swift in Sources */,
+				E4F9C2E32854269300B1DA79 /* model.swift in Sources */,
+				E4F209DF2854148100526CE3 /* ViewController.swift in Sources */,
+				E4F209DB2854148100526CE3 /* AppDelegate.swift in Sources */,
+				E4F000262854E35900933B6F /* BookDetailViewController.swift in Sources */,
+				E4F9C2E0285424A300B1DA79 /* LibraryViewController.swift in Sources */,
+				E4F9C2E52854281C00B1DA79 /* APImanager.swift in Sources */,
+				E4F209DD2854148100526CE3 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E4F0003F28553DCA00933B6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E4F209D62854148100526CE3 /* TesseractBook */;
+			targetProxy = E4F0003E28553DCA00933B6F /* PBXContainerItemProxy */;
+		};
+		E4F0004C28553DD600933B6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E4F209D62854148100526CE3 /* TesseractBook */;
+			targetProxy = E4F0004B28553DD600933B6F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E4F209E02854148100526CE3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E4F209E12854148100526CE3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E4F209E52854148200526CE3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E4F209E62854148200526CE3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E4F0004128553DCA00933B6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RY7FU92BLD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maconsoft.TesseractBookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TesseractBook;
+			};
+			name = Debug;
+		};
+		E4F0004228553DCA00933B6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RY7FU92BLD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maconsoft.TesseractBookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TesseractBook;
+			};
+			name = Release;
+		};
+		E4F0004E28553DD600933B6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RY7FU92BLD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maconsoft.TesseractBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TesseractBook.app/TesseractBook";
+			};
+			name = Debug;
+		};
+		E4F0004F28553DD600933B6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RY7FU92BLD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maconsoft.TesseractBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TesseractBook.app/TesseractBook";
+			};
+			name = Release;
+		};
+		E4F209E92854148200526CE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E4F209EA2854148200526CE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E4F209EC2854148200526CE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RY7FU92BLD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TesseractBook/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maconsoft.TesseractBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		E4F209ED2854148200526CE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RY7FU92BLD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TesseractBook/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maconsoft.TesseractBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4F0004028553DCA00933B6F /* Build configuration list for PBXNativeTarget "TesseractBookUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4F0004128553DCA00933B6F /* Debug */,
+				E4F0004228553DCA00933B6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4F0004D28553DD600933B6F /* Build configuration list for PBXNativeTarget "TesseractBookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4F0004E28553DD600933B6F /* Debug */,
+				E4F0004F28553DD600933B6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4F209D22854148100526CE3 /* Build configuration list for PBXProject "TesseractBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4F209E92854148200526CE3 /* Debug */,
+				E4F209EA2854148200526CE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4F209EB2854148200526CE3 /* Build configuration list for PBXNativeTarget "TesseractBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4F209EC2854148200526CE3 /* Debug */,
+				E4F209ED2854148200526CE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4F209CF2854148100526CE3 /* Project object */;
+}
