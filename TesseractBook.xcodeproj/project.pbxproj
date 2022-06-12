@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E463B11C285630EA00B821D2 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = E463B11B285630EA00B821D2 /* json.swift */; };
 		E4F000262854E35900933B6F /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F000252854E35900933B6F /* BookDetailViewController.swift */; };
 		E4F0002C2855020900933B6F /* Download+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F0002B2855020900933B6F /* Download+Cache.swift */; };
 		E4F0002E2855165E00933B6F /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F0002D2855165E00933B6F /* BookTableViewCell.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E463B11B285630EA00B821D2 /* json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
 		E4F000252854E35900933B6F /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		E4F0002B2855020900933B6F /* Download+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Download+Cache.swift"; sourceTree = "<group>"; };
 		E4F0002D2855165E00933B6F /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				E4F9C2E22854269300B1DA79 /* model.swift */,
 				E4F9C2E42854281C00B1DA79 /* APImanager.swift */,
 				E4F0002B2855020900933B6F /* Download+Cache.swift */,
+				E463B11B285630EA00B821D2 /* json.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E463B11C285630EA00B821D2 /* json.swift in Sources */,
 				E4F9C2E728542F7B00B1DA79 /* Dependencies.swift in Sources */,
 				E4F0002C2855020900933B6F /* Download+Cache.swift in Sources */,
 				E4F0002E2855165E00933B6F /* BookTableViewCell.swift in Sources */,

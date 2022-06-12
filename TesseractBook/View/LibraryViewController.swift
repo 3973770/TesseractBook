@@ -14,7 +14,7 @@ class LibraryViewController: UIViewController {
         super.viewDidLoad()
         TableView.register(BookTableViewCell.self, forCellReuseIdentifier: BookTableViewCell.Identifier)
         Dependencies.myModel.DelegateLibrary = self
-        Dependencies.myModel.UpdateAllViewList()
+        Dependencies.myModel.UpdateLybraryList()
     }
 }
 

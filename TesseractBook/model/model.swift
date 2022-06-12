@@ -8,25 +8,28 @@
 import Foundation
 
 
-struct Identifiers: Codable {
-    let type: String
-    let identifier: String
-}
 
-struct imgLinks:Codable {
-    let smallThumbnail: String
-    let thumbnail: String
-}
 
-struct vInfo:Codable {
-    let title: String
-    let authors: [String]?
-    
-    let industryIdentifiers: [Identifiers]?
-    let imageLinks: imgLinks?
-}
 
 struct book: Codable {
+    struct vInfo:Codable {
+        struct Identifiers: Codable {
+            let type: String
+            let identifier: String
+        }
+
+        struct imgLinks:Codable {
+            let smallThumbnail: String
+            let thumbnail: String
+        }
+        
+        let title: String
+        let authors: [String]?
+        
+        let industryIdentifiers: [Identifiers]?
+        let imageLinks: imgLinks?
+    }
+    
     let id: String
     let volumeInfo: vInfo
     
@@ -39,9 +42,6 @@ struct book: Codable {
 
 struct books: Codable {
     var items: [book]
-    
-
-
     
     mutating func append(_ newbooks:[book]){
         self.items.append(contentsOf: newbooks)
@@ -85,7 +85,6 @@ class model{
     var allBooks:books?
     var myBooks:books = books(items: [])
     
-
     // Path to library json file in documents directory
     private var PathToFileLibrary:URL = {
         var PathtoFile = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -103,17 +102,11 @@ class model{
     
     var loading = false
     
-    
+    // function for the test
     func clearall(){
         self.allBooks =  books(items: [])
         self.myBooks = books(items: [])
         self.lastsearchtext = ""
-    }
-    
-    func RequestBooksListNext(){
-        if !self.loading {
-            RequestBooksList(lastsearchtext,lastzone)
-        }
     }
     
     func AddDeletetoMyBooks(book b:book){
@@ -122,7 +115,7 @@ class model{
         UpdateAllViewList()
     }
     
-    
+    // request search in google API
     func RequestBooksList(_ searchtext: String,_ zone:SearchZone){
         self.loading = true
         if self.lastsearchtext != searchtext || self.lastzone != zone {
@@ -145,6 +138,14 @@ class model{
         }
     }
     
+    // Request next 40 book
+    func RequestBooksListNext(){
+        if !self.loading {
+            RequestBooksList(lastsearchtext,lastzone)
+        }
+    }
+
+    // update list in model and notificate about changes
     private func UpdateList(use data:Data){
         do {
             let Newbooks = try JSONDecoder().decode(books.self, from: data)
@@ -159,11 +160,15 @@ class model{
         }
     }
     
+    // global notification about update
     func UpdateAllViewList(){
-        DelegateSearch?.UpdateSearchBooks(self.allBooks)
+        self.DelegateSearch?.UpdateSearchBooks(self.allBooks)
         self.DelegateLibrary?.UpdateLibraryBooks(self.myBooks)
     }
     
+    func UpdateLybraryList(){
+        self.DelegateLibrary?.UpdateLibraryBooks(self.myBooks)
+    }
     
     func loadMyBooks(){
         let res = JSON.Read(url: self.PathToFileLibrary)
@@ -185,33 +190,4 @@ class model{
 }
 
 
-
-enum ErrorJson:Error{
-    case FileNotFound
-    case ErrorReading
-}
-
-class JSON {
-    static func Read(url fileurl:URL) -> Result<Data,Error> {
-        if FileManager.default.fileExists(atPath: fileurl.path) {
-            do {
-                let data = try Data(contentsOf: fileurl)
-                return .success(data)
-            } catch {
-                return .failure(ErrorJson.ErrorReading)
-            }
-        }
-        return .failure(ErrorJson.FileNotFound)
-    }
-    
-    static func Write<T:Encodable>(url fileurl:URL,with object:T){
-        if let data = try? JSONEncoder().encode(object) {
-            if FileManager.default.fileExists(atPath: fileurl.path) {
-                try? data.write(to: fileurl)
-              } else {
-                  FileManager.default.createFile(atPath: fileurl.path, contents: data, attributes: nil)
-              }
-        }
-    }
-}
 
