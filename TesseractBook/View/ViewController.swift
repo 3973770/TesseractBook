@@ -104,9 +104,9 @@ extension ViewController: UITableViewDelegate {
             -> UISwipeActionsConfiguration? {
             guard let allbooks = self.allbooks else { return nil }
             
-                let action = UIContextualAction(style: .destructive, title: nil) { (_, _, completionHandler) in
+                let action = UIContextualAction(style: .destructive, title: nil) { (_, _, completion) in
                     Dependencies.myModel.AddDeletetoMyBooks(book: allbooks.items[indexPath.row])
-                    completionHandler(true)
+                    completion(true)
                 }
                 
                 if allbooks.items[indexPath.row].inMyLibrary() {

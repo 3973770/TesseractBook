@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+/// reusable UITableViewCell for book - used in two viewcontrolers (search and library)
+
 class BookTableViewCell: UITableViewCell {
 
     static let Identifier = "bookcell"

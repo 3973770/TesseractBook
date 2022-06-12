@@ -13,6 +13,8 @@ enum imgSize:String{
     case big = "big"
 }
 
+
+// Store all images in cache directory
 class ThumbnailCache{
     static func GetUrl(by id:String,size iSize:imgSize) -> URL {
         var PathtoFile = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
@@ -32,6 +34,10 @@ class ThumbnailCache{
 
 
 extension UIImageView {
+    
+    // function set image for ImageView
+    /// if present in cache - load image from file
+    /// if not present - download from url and save to cache
     func load(_ b: book,size iSize:imgSize) {
         guard let stringurl = b.volumeInfo.imageLinks?.smallThumbnail else {
             return

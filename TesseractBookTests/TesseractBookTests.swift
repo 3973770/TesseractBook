@@ -75,7 +75,10 @@ class TesseractBookTests: XCTestCase {
         for i in 10..<15 {
             Dependencies.myModel.AddDeletetoMyBooks(book: allBooks.items[i])
         }
-        XCTAssertEqual(Dependencies.myModel.myBooks.items.count, 5)
+        for i in 10..<15 {
+            Dependencies.myModel.AddDeletetoMyBooks(book: allBooks.items[i])
+        }
+        XCTAssertEqual(Dependencies.myModel.myBooks.items.count, 0)
     }
     
     

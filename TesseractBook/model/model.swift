@@ -39,6 +39,10 @@ struct book: Codable {
 
 struct books: Codable {
     var items: [book]
+    
+
+
+    
     mutating func append(_ newbooks:[book]){
         self.items.append(contentsOf: newbooks)
     }
@@ -81,11 +85,22 @@ class model{
     var allBooks:books?
     var myBooks:books = books(items: [])
     
+
+    // Path to library json file in documents directory
+    private var PathToFileLibrary:URL = {
+        var PathtoFile = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        PathtoFile = PathtoFile.appendingPathComponent("mybooks")
+        PathtoFile = PathtoFile.appendingPathExtension("json")
+        return PathtoFile
+    }()
+
+    var DelegateSearch:modelDelegateSearch?
+    var DelegateLibrary:modelDelegateLibrary?
+
     var lastsearchtext = ""
     var lastzone:SearchZone = .byTitle
     
-    var DelegateSearch:modelDelegateSearch?
-    var DelegateLibrary:modelDelegateLibrary?
+    
     var loading = false
     
     
@@ -100,7 +115,6 @@ class model{
             RequestBooksList(lastsearchtext,lastzone)
         }
     }
-    
     
     func AddDeletetoMyBooks(book b:book){
         self.myBooks.AddDelete(book: b)
@@ -123,7 +137,7 @@ class model{
         APIManager.RequestBooksList(searchtext,lastzone, startIndex) { Res in
             switch Res {
                 case .failure(let err):
-                    print("Error \(err)")
+                    print(err)
                 case .success(let data):
                     self.UpdateList(use: data)
             }
@@ -150,30 +164,52 @@ class model{
         self.DelegateLibrary?.UpdateLibraryBooks(self.myBooks)
     }
     
+    
     func loadMyBooks(){
-        var PathtoFile = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        PathtoFile = PathtoFile.appendingPathComponent("mybooks")
-        PathtoFile = PathtoFile.appendingPathExtension("json")
-        if FileManager.default.fileExists(atPath: PathtoFile.path) {
-            do {
-                let data = try Data(contentsOf: PathtoFile)
-                self.myBooks = try JSONDecoder().decode(books.self, from: data)
-            } catch {
-                print("Error loading my books")
-            }
+        let res = JSON.Read(url: self.PathToFileLibrary)
+        switch res {
+            case .success(let data):
+                do {
+                    self.myBooks = try JSONDecoder().decode(books.self, from: data)
+                } catch {
+                    print("error decode json")
+                }
+            case .failure(let err):
+                print(err)
         }
     }
     
-    func SaveMyBooks(){
-        if let data = try? JSONEncoder().encode(self.myBooks) {
-            var PathtoFile = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-            PathtoFile = PathtoFile.appendingPathComponent("mybooks")
-            PathtoFile = PathtoFile.appendingPathExtension("json")
-            
-            if FileManager.default.fileExists(atPath: PathtoFile.path) {
-                try? data.write(to: PathtoFile)
+    private func SaveMyBooks(){
+        JSON.Write(url: self.PathToFileLibrary, with: self.myBooks)
+    }
+}
+
+
+
+enum ErrorJson:Error{
+    case FileNotFound
+    case ErrorReading
+}
+
+class JSON {
+    static func Read(url fileurl:URL) -> Result<Data,Error> {
+        if FileManager.default.fileExists(atPath: fileurl.path) {
+            do {
+                let data = try Data(contentsOf: fileurl)
+                return .success(data)
+            } catch {
+                return .failure(ErrorJson.ErrorReading)
+            }
+        }
+        return .failure(ErrorJson.FileNotFound)
+    }
+    
+    static func Write<T:Encodable>(url fileurl:URL,with object:T){
+        if let data = try? JSONEncoder().encode(object) {
+            if FileManager.default.fileExists(atPath: fileurl.path) {
+                try? data.write(to: fileurl)
               } else {
-                FileManager.default.createFile(atPath: PathtoFile.path, contents: data, attributes: nil)
+                  FileManager.default.createFile(atPath: fileurl.path, contents: data, attributes: nil)
               }
         }
     }

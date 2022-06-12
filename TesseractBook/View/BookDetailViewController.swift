@@ -26,7 +26,6 @@ class BookDetailViewController: UIViewController {
         self.view.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    
     func updateView(_ b:book){
         self.b = b
         DispatchQueue.main.async {
