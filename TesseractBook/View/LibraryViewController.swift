@@ -60,6 +60,8 @@ extension LibraryViewController: UITableViewDelegate {
             -> UISwipeActionsConfiguration? {
             let deleteAction = UIContextualAction(style: .destructive, title: nil) { (_, _, completionHandler) in
                 guard let allbooks = self.allbooks else { return }
+                self.allbooks?.items.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.bottom)
                 Dependencies.myModel.AddDeletetoMyBooks(book: allbooks.items[indexPath.row])
                 completionHandler(true)
             }
